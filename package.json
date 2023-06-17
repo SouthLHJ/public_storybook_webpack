@@ -1,0 +1,48 @@
+{
+  "name": "public_storybook_test",
+  "version": "1.0.0",
+  "description": "스토리북 연습",
+  "keywords": ["storybook"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build && rename storybook-static docs",
+    "build": "rollup -c",
+    "prepack": "npm run build"
+  },
+  "main": "dist/esm/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "author": "Sopi",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.21",
+    "@storybook/addon-interactions": "^7.0.21",
+    "@storybook/addon-links": "^7.0.21",
+    "@storybook/blocks": "^7.0.21",
+    "@storybook/react": "^7.0.21",
+    "@storybook/react-vite": "^7.0.21",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.21"
+  },
+  "dependencies": {
+    "rollup": "^3.25.1",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-scss": "^4.0.0",
+    "sass": "^1.63.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.63.4"
+  }
+}
