@@ -2,7 +2,9 @@
   "name": "public_storybook_test",
   "version": "1.0.0",
   "description": "스토리북 연습",
-  "keywords": ["storybook"],
+  "keywords": [
+    "storybook"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
@@ -26,7 +28,6 @@
     "@storybook/addon-links": "^7.0.21",
     "@storybook/blocks": "^7.0.21",
     "@storybook/react": "^7.0.21",
-    "@storybook/react-vite": "^7.0.21",
     "@storybook/testing-library": "^0.0.14-next.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -34,11 +35,17 @@
     "storybook": "^7.0.21"
   },
   "dependencies": {
+    "@storybook/builder-webpack5": "^7.0.22",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/preset-create-react-app": "^7.0.22",
+    "@storybook/react-webpack5": "^7.0.21",
+    "babel-plugin-named-exports-order": "^0.0.2",
     "rollup": "^3.25.1",
     "rollup-plugin-esbuild": "^5.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-scss": "^4.0.0",
-    "sass": "^1.63.4"
+    "sass": "^1.63.4",
+    "webpack": "^5.87.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
